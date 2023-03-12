@@ -1,0 +1,113 @@
+* { 
+    outline: none;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 12pt;
+}
+
+@media screen and (min-width: 820px) {
+    html {
+        font-size: 14pt;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    html {
+        font-size: 16pt;
+    }
+}
+
+
+
+body {
+    background-color: antiquewhite;
+    font-size: 1rem;
+    font-family: sans-serif;
+}
+
+h3 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    min-width: 20rem;
+    max-width: 40rem;
+    margin: auto;
+
+    border:  0.05rem solid rgb(241, 205, 156);
+}
+
+.accordion:hover .accordion__cross {
+    display: inline-block;
+}
+
+.accordion__item {
+    border-bottom: 0.05rem solid rgb(241, 205, 156);
+    cursor: pointer;
+}
+
+.accordion__item:active {
+    color: rgb(48, 124, 254);
+}
+
+.accordion__item:active .accordion__cross {
+    background-image: url('./cross_blue.svg');
+}
+
+.accordion__item:active .accordion__body {
+    opacity: 0.5;
+}
+
+.accordion__item:hover .accordion__cross, 
+.accordion__item:focus .accordion__cross {
+    transform: rotate(45deg);
+}
+
+.accordion__item:hover .accordion__body, 
+.accordion__item:focus .accordion__body {
+    height: 16rem;
+}
+
+.accordion__title { 
+    font-weight: 700;
+    line-height: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+
+.accordion__cross {
+    display: none;
+    width: 1.5em;
+    height: 1.5em;
+    background-image: url('./cross.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 300ms;
+}
+
+.accordion__body {
+    overflow: hidden;
+    height: 0;
+    transition: height 300ms;
+    text-align: center;
+}
+
+.accordion__body > img {
+    margin-bottom: 2rem;
+    display: block;
+    margin: auto;
+    width: 16rem;
+    height: 16rem
+}
