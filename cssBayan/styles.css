@@ -1,0 +1,39 @@
+body {
+    background-color: antiquewhite;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+
+    border: 1px solid rgb(241, 205, 156);
+}
+
+.accordion__item:hover .accordion__title::after, .accordion__item:focus .accordion__title::after {
+    transform: rotate(45deg);
+}
+
+.accordion__title { 
+    position: relative;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+
+.accordion__title::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    background-image: url('./cross.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 300ms;
+}
