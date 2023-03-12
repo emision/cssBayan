@@ -3,6 +3,23 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 12pt;
+}
+
+@media screen and (min-width: 820px) {
+    html {
+        font-size: 14pt;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    html {
+        font-size: 16pt;
+    }
+}
+
+
 
 body {
     background-color: antiquewhite;
@@ -88,7 +105,9 @@ h3 {
 }
 
 .accordion__body > img {
-    padding-bottom: 2rem;
+    margin-bottom: 2rem;
     display: block;
     margin: auto;
+    width: 16rem;
+    height: 16rem
 }
